@@ -115,6 +115,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="NeuralNetwork.cpp" />
+    <ClCompile Include="TrainingData.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NeuralNetwork.h" />
+    <ClInclude Include="TrainingData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
