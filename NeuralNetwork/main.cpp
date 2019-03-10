@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include <time.h>
 
 #include "TrainingData.h"
 #include "NeuralNetwork.h"
@@ -8,12 +9,13 @@
 
 int main()
 {
+	srand(time(NULL));
 #if defined(XOR)
 	TrainingData trainingData("XORTraining.txt");
 	NeuralNetwork neuralNet(std::vector<unsigned>{2, 2, 1}, 0.15f, 0.5f, 100);
 #elif defined(RPS)
 	TrainingData trainingData("RPSTraining.txt");
-	NeuralNetwork neuralNet(std::vector<unsigned>{1, 3, 1}, 0.15f, 0.5f, 100);
+	NeuralNetwork neuralNet(std::vector<unsigned>{1, 2, 1}, 0.15f, 0.5f, 100);
 #endif
 	
 	for (auto & layer : neuralNet.GetNeuronData())
